@@ -27,7 +27,7 @@ mkfs.fat -F32 "$EFI_PART"
 mkfs.ext4 /dev/mapper/root
 
 # Mount file systems
-mount /dev/mapper/cryptroot /mnt
+mount /dev/mapper/root /mnt
 mount --mkdir "$EFI_PART" /mnt/boot
 
 # Create swapfile
