@@ -37,7 +37,7 @@ mkswap /mnt/swapfile
 swapon /mnt/swapfile
 
 # Install system
-pacstrap -K /mnt base base-devel linux linux-firmware intel-ucode mesa vulkan-intel pipewire pipewire-pulse wireplumber bluez bluez-utils efibootmgr cryptsetup networkmanager neovim git nftables throttled auto-cpufreq fwupd reflector
+pacstrap -K /mnt base base-devel linux linux-firmware intel-ucode mesa vulkan-intel pipewire pipewire-pulse wireplumber bluez bluez-utils efibootmgr cryptsetup networkmanager neovim git nftables throttled fwupd reflector
 
 # Generate fstab
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -95,7 +95,7 @@ systemctl enable systemd-timesyncd
 systemctl enable nftables
 systemctl enable throttled
 systemctl enable auto-cpufreq
-systemctl enable fwupd
+#systemctl enable fwupd
 systemctl enable fstrim
 systemctl enable reflector
 
